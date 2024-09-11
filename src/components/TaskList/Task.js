@@ -2,8 +2,10 @@ import React from 'react';
 
 function Task({ task, toggleComplete, removeTask }) {
   return (
-    <li style={{ textDecoration: task.completed ? 'line-through' : 'none' }}>
-      {task.text}
+    <li>
+      <span style={{ textDecoration: task.completed ? 'line-through' : 'none' }}>
+        {task.text}
+      </span>
       <button onClick={() => toggleComplete(task.id)}>
         {task.completed ? 'Desfazer' : 'Concluir'}
       </button>
